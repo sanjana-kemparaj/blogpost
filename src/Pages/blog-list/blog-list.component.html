@@ -1,0 +1,49 @@
+<h1 class="font-mulish text-4xl mt-2 mb-3">Latest Blogs</h1>
+<button
+  class="border border-black rounded-md p-2"
+  routerLink="/add-blog"
+  routerLinkActive="active"
+>
+  Add blog
+</button>
+<h4 class="font-mulish text-m mt-3 mb-3">
+  Our latest web design tips, tricks, insights and resources hot off the press.
+</h4>
+<!-- Blog Cards Grid -->
+<div class="grid grid-cols-3 gap-12">
+  <!-- Single Card -->
+  <div
+    class="bg-white shadow-md rounded-lg overflow-hidden"
+    *ngFor="let blog of blogs"
+  >
+    <img
+      src="https://via.placeholder.com/300"
+      alt="Blog Image"
+      class="w-full h-48 object-cover"
+    />
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">{{ blog.title }}</h2>
+      <p class="text-gray-600 text-sm">{{ blog.content }}</p>
+    </div>
+  </div>
+</div>
+<!--pagination-->
+<div class="flex justify-center items-center mt-6">
+  <nav class="flex space-x-2">
+    <button
+      class="px-3 py-1 font-bold border border-black text-black rounded-full bg-white hover:bg-black hover:text-white"
+    >
+      1
+    </button>
+    <button
+      class="px-3 py-1 font-bold border border-black text-black rounded-full bg-white hover:bg-black hover:text-white"
+    >
+      2
+    </button>
+    <button
+      class="px-3 py-1 font-bold text-black rounded-full hover:text-bluePrimary"
+    >
+      →
+    </button>
+  </nav>
+</div>

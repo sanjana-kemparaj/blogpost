@@ -1,0 +1,70 @@
+<div class="m-5">
+  <h2 class="font-mulish text-4xl">Add new blog here!</h2>
+  <div class="h-[80vh]">
+    <form
+      (ngSubmit)="onSubmit()"
+      action="#"
+      method="POST"
+      class="flex flex-col m-3 justify-between gap-y-2"
+    >
+      <div class="flex">
+        <label for="blogHeader" class="font-mulish text-xl m-3"
+          >Blog Header
+        </label>
+        <input
+          type="text"
+          id="blogHeader"
+          name="blogHeader"
+          class="border border-gray-500 border-opacity-50 p-4 w-2/3"
+          required
+        />
+      </div>
+
+      <div class="flex">
+        <label for="blogImage" class="font-mulish text-xl m-3"
+          >Blog Image
+        </label>
+        <input
+          type="file"
+          id="blogImage"
+          name="blogImage"
+          class="p-4 m-3"
+          required
+        />
+      </div>
+
+      <div class="flex">
+        <label for="authorName" class="font-mulish text-xl m-3"
+          >Author name
+        </label>
+        <input
+          type="text"
+          id="authorName"
+          name="authorName"
+          class="border border-gray-500 border-opacity-50 p-4 m-3 w-2/3"
+          required
+        />
+      </div>
+
+      <div class="flex">
+        <label for="content" class="font-mulish text-xl m-3">Blog here!</label>
+        <textarea
+          type="text"
+          id="content"
+          name="content"
+          class="border border-gray-500 border-opacity-50 p-4 m-3 w-2/3 h-[40vh]"
+          required
+        ></textarea>
+      </div>
+
+      <div class="flex justify-center items-center">
+        <button
+          type="submit"
+          class="bg-transparent hover:bg-black text-black-700 font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded w-1/5"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
